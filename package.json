@@ -1,0 +1,14 @@
+{
+  "name": "young_portfolio",
+  "version": "1.0.0",
+  "description": "Young Chi's Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Young Chi",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
