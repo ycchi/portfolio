@@ -102,6 +102,15 @@ main {
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
+
+    width: 250px;
+    height: 250px;
+    background: url('../img/portrait.jpg');
+    background-size: cover;
+    background-position: 40% 0%;
+  
+  
+
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
@@ -144,30 +153,32 @@ main {
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
     box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.75);
+
+    &:hover {
+      opacity: 0.5;
+      
+      border-color: $secondary-color;
+      @include easeOut;
+    }
   }
 
   img {
     width: 100%;
     border: 3px #fff solid;
 
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
-      @include easeOut;
-    }
+    
   }
 }
 
 // Contact Page
 .contact {
-  
+  @include bg-color;
 }
 
 .boxes {
   display: grid;
-  grid-auto-rows: 1fr;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   
   
   margin-top: 1rem;
@@ -185,7 +196,7 @@ main {
 
 
     background: lighten($primary-color, 5);
-    padding: 0.5rem;
+    
     border-bottom: $secondary-color 5px solid;
     box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.75);
 

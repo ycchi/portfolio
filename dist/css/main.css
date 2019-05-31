@@ -56,6 +56,8 @@
       width: 250px;
       height: 250px;
       background: url("../img/portrait.jpg");
+      background-size: cover;
+      background-position: 40% 0%;
       border-radius: 50%;
       border: solid 3px #000000; }
   .menu .nav-item {
@@ -178,6 +180,11 @@ main {
   grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
+    width: 250px;
+    height: 250px;
+    background: url("../img/portrait.jpg");
+    background-size: cover;
+    background-position: 40% 0%;
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
@@ -206,19 +213,21 @@ main {
     padding: 0.5rem;
     border-bottom: #000000 5px solid;
     box-shadow: 10px 10px 23px -5px rgba(0, 0, 0, 0.75); }
-  .projects img {
-    width: 100%;
-    border: 3px #fff solid; }
-    .projects img:hover {
+    .projects .project-item:hover {
       opacity: 0.5;
       border-color: #000000;
       transition: all 0.5s ease-out; }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid; }
+
+.contact {
+  background-color: #fff; }
 
 .boxes {
   display: grid;
-  grid-auto-rows: 1fr;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 1rem; }
   .boxes div {
     display: flex;
@@ -229,7 +238,6 @@ main {
     margin-bottom: 3rem;
     transition: all 0.5s ease-out;
     background: white;
-    padding: 0.5rem;
     border-bottom: #000000 5px solid;
     box-shadow: 10px 10px 23px -5px rgba(0, 0, 0, 0.75); }
     .boxes div:hover {
@@ -301,7 +309,9 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .boxes {
+    grid-template-columns: 2fr; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -312,4 +322,6 @@ main {
       margin-top: 1rem;
       font-size: 5rem; }
   .projects {
+    grid-template-columns: 1fr; }
+  .boxes {
     grid-template-columns: 1fr; } }
