@@ -96,9 +96,14 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
+
+  // original layout
+  // grid-template-areas:
+  //   'bioimage bio bio'
+  //   'job1 job2 job3';
+
   grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
+    'bio bio skills';
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -136,6 +141,15 @@ main {
 
   .job {
     background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+    box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.75);
+  }
+
+  .skills {
+    grid-area: skills;
+    background: lighten($primary-color, 5);
+    margin-top: 1rem;
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
     box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.75);
