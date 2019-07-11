@@ -164,12 +164,19 @@ main {
 
   .project-item {
     background: lighten($primary-color, 5);
+    opacity: 0.7;
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
     box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.75);
+    position: relative;
+
+    .btn-dark {
+      position: absolute;
+      bottom: 0.2rem;
+    }
 
     &:hover {
-      opacity: 0.5;
+      opacity: 1;
       
       border-color: $secondary-color;
       @include easeOut;
